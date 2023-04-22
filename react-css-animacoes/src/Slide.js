@@ -1,6 +1,8 @@
 import React from 'react'
 import styles from './Slide.module.css'
 
+import Img from './Img'
+
 const Slide = ({slides}) => {
   const [active, setActive] = React.useState(0)
   const [position, setPosition] = React.useState(0)
@@ -33,6 +35,8 @@ const Slide = ({slides}) => {
         <button onClick={slidePrev}>Anterior</button>
         <button onClick={slideNext}>Próximo</button>
       </nav>
+
+      <Img />
     </section>
   )
 }
