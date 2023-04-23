@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './Produtos.module.css'
 import {Link, Routes, Route, useNavigate} from 'react-router-dom'
+import Head from './Head';
 
 const Produtos = () => {
     const navigate = useNavigate();
@@ -14,7 +15,8 @@ const Produtos = () => {
  
       if (dados === null) return null;
  return (
-    <div className={styles.display}>
+    <div className={styles.display + ' animeLeft'}>
+        <Head title="Germanno | Produtos"/>
         {dados.map(dado => (
                 <div className={styles.card}>
                 <img onClick={() => navigate(`/produto/${dado.id}`)} src={dado.fotos[0].src} alt={dado.fotos[0].titulo}></img>

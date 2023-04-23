@@ -1,31 +1,23 @@
 .display {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     width: 80%;
     margin: 0 auto;
     gap: 10px;
-    transform: translateX(-20px);
-    animation: animeLeft .3s forwards;
 }
 
-@keyframes animeLeft {
-    to {
-        opacity: 1;
-        transform: initial;
-    }
-}
 
 .card {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 40%;
+    width: 80%;
     margin: 10px;
 }
 
 .card img {
     border-radius: 10px;
-    width: 50%;
+ 
 }
 
 .card img:hover {

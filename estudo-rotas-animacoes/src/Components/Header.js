@@ -1,12 +1,23 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import styles from './Header.module.css'
 
 const Header = () => {
   return (
     <nav className={styles.header}>
-        <Link to="/"><button>Produtos</button></Link>
-        <Link to="contato"><button>Contato</button></Link>
+      <ul>
+        <li>
+          <NavLink className={styles.link} to="/">
+          Produtos
+          </NavLink>
+        </li>
+        <li>
+          <NavLink className={styles.link} to="contato">
+          Contato
+          </NavLink>
+        </li>
+      </ul>
+       
     </nav>
   )
 }
